@@ -1,5 +1,4 @@
 # albatross
-A load testing tool for GWT Applications.
+A load testing tool for all Applications.
 
-Announcement:
-**Calling all interested developers to collaborate for this initiative.**
+
