@@ -1,5 +1,4 @@
 /*
- *
  *   Copyright 2018 Amey Parundekar
 
  *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +12,6 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *
  */
 
 package gwt
@@ -25,10 +23,8 @@ import (
 	"strings"
 )
 
-/*
- * Custom JSON Object identifier
- */
-type gwtrpcjson struct {
+// Gwtrpcjson Custom JSON Object identifier
+type Gwtrpcjson struct {
 	GWTRPCVersion           int
 	GWTRPCFlag              int
 	GWTRPCStringTablelength int
@@ -36,10 +32,8 @@ type gwtrpcjson struct {
 	GWTRPCPayload           []int
 }
 
-/*
- * parse : Parse GWT and convert to JSON. RETURNS: []byte
- */
-func parse(requestRPC string) []byte {
+// Parse GWT and convert to JSON. RETURNS: []byte
+func Parse(requestRPC string) []byte {
 	//Split tokenStream
 	var tokenStream []string
 	tokenStream = strings.Split(requestRPC, "|")
@@ -93,7 +87,7 @@ func parse(requestRPC string) []byte {
 	}
 
 	//gwtRPCJson : Custom data type to be converted to json
-	gwtRPCJson := &gwtrpcjson{
+	gwtRPCJson := &Gwtrpcjson{
 		gwtRPCVersion,
 		gwtRPCFlag,
 		stringTableLength,
